@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Spartan-Reg;
+  src: url("./fonts/Spartan-Regular.ttf");
+}
+
+@font-face {
+  font-family: Spartan-Med;
+  src: url("./fonts/Spartan-Medium.ttf");
+}
+
+@font-face {
+  font-family: Spartan-Bold;
+  src: url("./fonts/Spartan-Bold.ttf");
+}
+:root {
+  --darkgrey: hsl(0, 0%, 63%);
+  --verydarkgrey: hsl(0, 0%, 27%);
+}
+
+body {
+  font-size: 12px;
+  font-family: Spartan-Reg;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-family: Spartan-Bold;
+}
+
+h5 {
+  font-size: rem;
+  font-family: Spartan-Bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+p {
+  font-size: 0.7rem;
+  color: var(--darkgrey);
+  padding-top: 0.8rem;
+  line-height: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  border: transparent;
+  background-color: transparent;
+}
+
+.main-img {
+  width: 100vw;
+  height: 70vh;
+  background-image: url("./images/mobile-image-hero-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.navbar {
+  padding: 2rem;
+  background-color: transparent;
+}
+
+.normal {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+/* Hiding the normal */
+.hide {
+  display: none;
+}
+
+.links {
+  display: none;
+}
+
+/* Showing the links with background as white */
+.show {
+  display: flex;
+}
+.dim {
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.3);
+}
+.links ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: lowercase;
+}
+
+.links li {
+  padding: 0 0.8rem;
+  font-family: Spartan-Bold;
+}
+
+/* Making parent element's position srelative */
+.nav-btns {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.btn {
+  background-color: black;
+  padding: 4vw 7vw;
+}
+.btn:hover {
+  background-color: var(--verydarkgrey);
+}
+
+/* Content */
+.content {
+  padding: 2rem;
+}
+
+.shopNow {
+  padding: 2rem 0;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-family: Spartan-Med;
+}
+
+.shopNow:hover {
+  color: var(--darkgrey);
+}
+
+/* Bottom */
+.bottom {
+  display: grid;
+}
+.bottom-img {
+  width: 100vw;
+
+  object-fit: contain;
+}
+
+.bottom-img img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 375px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+
+    letter-spacing: 0.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+
+    padding-top: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+
+    letter-spacing: 0.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+
+    padding-top: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .main,
+  .bottom {
+    display: flex;
+  }
+  .main {
+    height: 70vh;
+  }
+
+  .main-img {
+    width: 60vw;
+    background-image: url("./images/desktop-image-hero-1.jpg");
+  }
+  .main-content {
+    width: 40vw;
+    padding: 0 2rem;
+  }
+
+  .navbar {
+    padding: 4rem;
+    display: flex;
+  }
+
+  /* HideHamburger and Close */
+  .hamburger {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
+  .normal {
+    width: auto;
+  }
+
+  .links {
+    display: block;
+    color: white;
+    padding-left: 2rem;
+    font-size: 1rem;
+  }
+  .links li {
+    font-family: Spartan-Reg;
+    position: relative;
+  }
+  .links li:hover::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1rem;
+  }
+  .logo {
+    margin: 0;
+    padding-right: 3rem;
+  }
+  .logo img {
+    height: 100%;
+  }
+
+  .nav-btns {
+    left: 60vw;
+  }
+  .btn {
+    background-color: black;
+    padding: 2vw 3vw;
+  }
+  .main-content {
+    display: grid;
+    place-content: center;
+  }
+
+  /* Bottom */
+  .bottom {
+    height: 30vh;
+  }
+  .bottom-img {
+    width: 130vw;
+  }
+  .bottom-img img {
+    height: 100%;
+  }
+
+  .bottom .content {
+    margin: auto 0;
+  }
+}
