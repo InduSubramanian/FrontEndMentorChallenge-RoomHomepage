@@ -26,7 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Room Homepage ScreenShot - Desktop](./MyDesign/DesktopView.jpg)
+![Room Homepage ScreenShot - Desktop](./MyDesign/DesktopView.jpg)n
+
+![Room Homepage ScreenShot - Mobile](./MyDesign/Mobile.pg)
 
 ## My process
 
